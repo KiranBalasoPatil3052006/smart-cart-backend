@@ -9,6 +9,7 @@ const { generateCashierCode } = require('./verifyCode');
 const Product = require('./models/Product');
 const Customer = require('./models/customer');
 const Purchase = require('./models/PurchaseHistory');
+
 const CashIntent = require('./models/CashIntent');
 const CashierCodeHistory = require('./models/CashierCodeHistory');
 
@@ -42,7 +43,7 @@ app.use(express.static(path.join(__dirname, '../www')));
 
 // MongoDB connection
 mongoose
-  .connect('mongodb+srv://kiranbalasopatil33:smartcart2025@cluster0.h7e8od5.mongodb.net/smartcart?retryWrites=true&w=majority', {
+  .connect(' ', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
